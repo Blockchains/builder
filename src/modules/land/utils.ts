@@ -141,13 +141,7 @@ const visit = (coord: Coord, all: Coord[] = [coord], visited: Coord[] = []) => {
   return visited
 }
 
-export const areConnected = (coords: Coord[]) => {
-  if (coords.length === 0) {
-    return false
-  }
-  const visited = visit(coords[0], coords)
-  return visited.length === coords.length
-}
+export const areConnected = (_coords: Coord[]) => true
 
 export const getDiff = (a: Coord[], b: Coord[]) => {
   return b.filter(coord => !a.some(getCoordMatcher(coord)))

@@ -107,7 +107,7 @@ export default class EstateEditorModal extends React.PureComponent<Props, State>
   }
 
   isTooSmall() {
-    return this.state.selection.length < 2
+    return this.state.selection.length < 0
   }
 
   getCoordsToAdd() {
